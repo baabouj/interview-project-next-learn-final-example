@@ -14,7 +14,7 @@ function Tabs() {
     const newSearchParams = new URLSearchParams([
       ...Array.from(searchParams.entries().filter(([key]) => key !== "status")),
       ...Object.entries({ status }),
-    ]).toString();
+    ] as any).toString();
 
     router.replace(`/dashboard/invoices?${newSearchParams}`);
   }
