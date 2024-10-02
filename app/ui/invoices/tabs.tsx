@@ -12,7 +12,7 @@ function Tabs() {
 
   function reloadRoute(status: string) {
     const newSearchParams = new URLSearchParams([
-      ...Array.from(searchParams.entries().filter(([key]) => key !== "status")),
+      ...Array.from(searchParams.entries()).filter(([key]) => key !== "status"),
       ...Object.entries({ status }),
     ] as any).toString();
 
